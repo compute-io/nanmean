@@ -19,20 +19,56 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 To use the module,
 
 ``` javascript
-var lib = require( 'compute-nanmean' );
+var nanmean = require( 'compute-nanmean' );
+```
+
+#### nanmean( arr )
+
+Computes the arithmetic mean ignoring any non-numeric values.
+
+``` javascript
+var data = [ 1, NaN, 2, 3, NaN ];
+
+var mu = nanmean( data );
+// returns 2
 ```
 
 
 ## Examples
 
 ``` javascript
-var lib = require( 'compute-nanmean' );
+var nanmean = require( 'compute-nanmean' );
+
+var data = new Array( 1000 );
+
+for ( var i = 0; i < data.length; i++ ) {
+	if ( Math.floor( i/5 ) === 0 ) {
+		data[ i ] = NaN;
+	} else {
+		data[ i ] = Math.random() * 100;
+	}
+}
+
+console.log( nanmean( data ) );
 ```
 
 To run the example code from the top-level application directory,
 
 ``` bash
 $ node ./examples/index.js
+```
+
+
+## Notes
+
+The mean value of an array containing non-numeric values is equal to the mean value of an equivalent array which is without any of the non-numeric values. Hence,
+
+``` javascript
+var d1 = [ 1, NaN, 2, 3, NaN ],
+	d2 = [ 1, 2, 3 ];
+
+console.log( nanmean( d1 ) === nanmean( d2 ) );
+// returns true
 ```
 
 
