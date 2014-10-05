@@ -24,7 +24,7 @@ var nanmean = require( 'compute-nanmean' );
 
 #### nanmean( arr )
 
-Computes the arithmetic mean ignoring any non-numeric values.
+Computes the arithmetic mean while ignoring any non-numeric values.
 
 ``` javascript
 var data = [ 1, NaN, 2, 3, NaN ];
