@@ -61,7 +61,7 @@ $ node ./examples/index.js
 
 ## Notes
 
-The mean value of an array containing non-numeric values is equal to the mean value of an equivalent array which is without any of the non-numeric values. Hence,
+The mean value of an array containing non-numeric values is equal to the mean value of an equivalent array which contains only the numeric values. Hence,
 
 ``` javascript
 var d1 = [ 1, NaN, 2, 3, NaN ],
