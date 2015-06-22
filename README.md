@@ -51,20 +51,21 @@ If the array or matrix contains missing values encoded by numbers, use the `enco
 
 * __encoding__: `array` holding all values which will be regarded as missing values. Default: `[]`.
 
-```
+``` javascript
 var data, mu;
 
 data = [ 2, 4, 999, 5, 3, 8, 2, 981 ];
-mu = nanhmean( data, {
+mu = nanmean( data, {
 	'encoding': [ 981, 999 ]
 });
 // returns 4
 
 data = new Int32Array( data );
-mu = nanhmean( data, {
+mu = nanmean( data, {
 	'encoding': [ 981, 999 ]
 });
 // returns 4
+``` 
 
 For object `arrays`, provide an accessor `function` for accessing `array` values.
 
