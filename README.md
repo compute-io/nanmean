@@ -4,6 +4,15 @@ nanmean
 
 > Computes the arithmetic mean ignoring any values which are not numeric or encoded as missing values.
 
+The [arithmetic mean](http://en.wikipedia.org/wiki/Arithmetic_mean) is defined as
+
+<div class="equation" align="center" data-raw-text="\mu = \frac{1}{N} \sum_{i=0}^{N-1} x_i" data-equation="eq:arithmetic_mean">
+	<img src="https://cdn.rawgit.com/compute-io/nanmean/dcbe468577ce6ae232a3d392236530aa7b107681/docs/img/eqn.svg" alt="Equation for the arithmetic mean.">
+	<br>
+</div>
+
+where `x_0, x_1,...,x_{N-1}` are individual data values and `N` is the total number of values in the data set.
+
 
 ## Installation
 
